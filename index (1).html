@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Notes Hub</title>
+
+<style>
+:root {
+  --bg: #0b1f18;
+  --surface: #122e24;
+  --border: #1f4a3a;
+  --text: #eafbf3;
+  --muted: #7fae9c;
+  --accent: #34d399;
+  --sem1: #6ee7b7;
+  --sem2: #059669;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.topbar .brand {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topbar .brand span {
+  color: var(--accent);
+}
+
+#search {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 16px 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabs a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs a:hover,
+.tabs a.active {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.sem-heading {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sem-heading + .grid {
+  margin-bottom: 32px;
+}
+
+main {
+  padding: 28px 24px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--sem1);
+  border-radius: 10px;
+  padding: 16px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.card.sem2 {
+  border-left-color: var(--sem2);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 3px 0;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 32px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">Class <span>Notes</span> Hub</div>
+</header>
+
+<nav class="tabs">
+  <a href="#sem1" class="active">Semester 1</a>
+  <a href="#sem2">Semester 2</a>
+  <a href="#sem3">Semester 3</a>
+</nav>
+
+<main>
+  <h2 id="sem1" class="sem-heading">Semester 1</h2>
+  <div class="grid">
+
+    <div class="card sem1">
+      <h3>Intro to Programming</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+    <div class="card sem1">
+      <h3>Calculus I</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+  </div>
+
+  <h2 id="sem2" class="sem-heading">Semester 2</h2>
+  <div class="grid">
+
+    <div class="card sem2">
+      <h3>Networks</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+    <div class="card sem2">
+      <h3>Databases</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+  </div>
+
+  <h2 id="sem3" class="sem-heading">Semester 3</h2>
+  <div class="grid">
+
+    <div class="card sem1">
+      <h3>Modern Physics</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+    <div class="card sem2">
+      <h3>Computer Organization</h3>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Modern+Physics%2C+6th+Edition+by+Paul+Tipler%2C+Ralph+Llewellyn+(z-lib.org)(1)-1+(2).pdf" target="_blank">Modern Physics, 6th Edition - Tipler &amp; Llewellyn</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/readme.txt" target="_blank">Readme</a>
+      <a href="https://notes-hub-precious-2026.s3.eu-north-1.amazonaws.com/Public/Computer_Organization_Assignment_1+(1).pdf" target="_blank">Computer Organization Assignment 1</a>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
